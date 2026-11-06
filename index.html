@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fahad's Salon & Grooming | Men's Salon</title>
+<meta name="description" content="Sultan Barber & Grooming: haircuts, beard styling, shaves and facials for men. Book your chair online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- CSS alag file mein hai -->
+<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">FAHAD<span>.</span></a>
+    <button class="burger" id="burger" aria-label="Open menu">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="#services">Price list</a></li>
+      <li><a href="#team">Barbers</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#book" class="btn btn-brass small">Book a chair</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <h1>Sharp cuts.<br>Clean shaves.<br>Zero waiting.</h1>
+      <p>Haircuts, beard styling and hot-towel shaves from barbers who have 10+ years behind the chair. Book online and walk straight in.</p>
+      <div class="hero-btns">
+        <a href="#book" class="btn btn-brass">Book your chair</a>
+        <a href="#services" class="btn btn-line">See prices</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>10+</strong>Years open</div>
+        <div><strong>6,500</strong>Haircuts done</div>
+        <div><strong>4.9</strong>Google rating</div>
+      </div>
+    </div>
+
+    <!-- Barber pole: pure CSS, koi image nahi -->
+    <div class="pole-wrap" aria-hidden="true">
+      <div class="pole-cap"></div>
+      <div class="pole"></div>
+      <div class="pole-cap bottom"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES (price menu) ============ -->
+<section id="services">
+  <div class="container narrow">
+    <h2>Price list</h2>
+    <p class="lead">Fixed prices. What you see here is what you pay.</p>
+
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-filter="all">All</button>
+      <button class="tab" data-filter="hair">Hair</button>
+      <button class="tab" data-filter="beard">Beard</button>
+      <button class="tab" data-filter="care">Skin and care</button>
+    </div>
+
+    <ul class="menu-list" id="services-list">
+      <li class="item" data-cat="hair"><div><h3>Classic haircut</h3><p>Scissor or clipper cut, wash and style.</p></div><span class="dots"></span><span class="price">$15</span></li>
+      <li class="item" data-cat="hair"><div><h3>Skin fade</h3><p>Sharp fade with razor line-up.</p></div><span class="dots"></span><span class="price">$20</span></li>
+      <li class="item" data-cat="hair"><div><h3>Hair colour</h3><p>Black, brown or highlights.</p></div><span class="dots"></span><span class="price">$30</span></li>
+      <li class="item" data-cat="beard"><div><h3>Beard trim and shape</h3><p>Shape, trim and oil finish.</p></div><span class="dots"></span><span class="price">$10</span></li>
+      <li class="item" data-cat="beard"><div><h3>Hot towel shave</h3><p>Straight razor with steam towel.</p></div><span class="dots"></span><span class="price">$14</span></li>
+      <li class="item" data-cat="beard"><div><h3>Cut and beard combo</h3><p>Haircut plus beard styling.</p></div><span class="dots"></span><span class="price">$24</span></li>
+      <li class="item" data-cat="care"><div><h3>Charcoal facial</h3><p>Deep cleanse for oily or dull skin.</p></div><span class="dots"></span><span class="price">$18</span></li>
+      <li class="item" data-cat="care"><div><h3>Head massage</h3><p>15 minutes with warm oil.</p></div><span class="dots"></span><span class="price">$8</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ TEAM ============ -->
+<section id="team" class="dark">
+  <div class="container">
+    <h2>Your barbers</h2>
+    <p class="lead">Pick the barber you like and ask for him by name.</p>
+    <div class="team">
+      <div class="barber"><div class="avatar">AR</div><h3>Ali Raza</h3><p>Master barber. Skin fades and classic cuts.</p></div>
+      <div class="barber"><div class="avatar">HK</div><h3>Hamza Khan</h3><p>Beard specialist. Straight razor shaves.</p></div>
+      <div class="barber"><div class="avatar">US</div><h3>Usman Shah</h3><p>Colour and styling. Trending looks.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section id="reviews">
+  <div class="container">
+    <h2>What clients say</h2>
+    <p class="lead">Real words from regulars.</p>
+    <div class="reviews">
+      <div class="review"><div class="stars">★★★★★</div><p>Best fade in the city. Ali bhai gets it right every single time.</p><small>Bilal A., regular</small></div>
+      <div class="review"><div class="stars">★★★★★</div><p>Hot towel shave was a different level. Clean place and on time.</p><small>Faizan M., client</small></div>
+      <div class="review"><div class="stars">★★★★★</div><p>Booked the groom package before my wedding. Looked sharp all day.</p><small>Danish R., groom</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section id="book" class="book">
+  <div class="container book-grid">
+    <div>
+      <h2>Book your chair</h2>
+      <p class="lead">Send the form and we will confirm your slot within 30 minutes on WhatsApp.</p>
+      <ul class="info">
+        <li><b>Address:</b> 12 Main Boulevard, Downtown</li>
+        <li><b>Hours:</b> Every day, 11 AM to 11 PM</li>
+        <li><b>Phone:</b> +00 000 0000000</li>
+        <li><b>Email:</b> hello@sultanbarber.com</li>
+      </ul>
+    </div>
+
+    <form id="booking-form" novalidate>
+      <label for="name">Full name</label>
+      <input type="text" id="name" placeholder="Your name">
+
+      <label for="phone">Phone number</label>
+      <input type="tel" id="phone" placeholder="03XX XXXXXXX">
+
+      <label for="service">Service</label>
+      <select id="service">
+        <option value="">Choose a service</option>
+        <option>Classic haircut</option>
+        <option>Skin fade</option>
+        <option>Hair colour</option>
+        <option>Beard trim and shape</option>
+        <option>Hot towel shave</option>
+        <option>Cut and beard combo</option>
+        <option>Charcoal facial</option>
+        <option>Head massage</option>
+      </select>
+
+      <div class="row">
+        <div><label for="date">Date</label><input type="date" id="date"></div>
+        <div><label for="time">Time</label><input type="time" id="time"></div>
+      </div>
+
+      <button type="submit" class="btn btn-brass full">Request appointment</button>
+      <p class="msg" id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <a href="#home" class="logo"><span>FAHAD.</span></a>
+    <p>© <span id="year"></span> Fahad's Salon & Grooming. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ BASIC JAVASCRIPT (HTML ke andar) ============ -->
+<script>
+// 1) Mobile menu: burger dabane par menu khule/band ho
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+
+burger.addEventListener("click", function () {
+  menu.classList.toggle("open");
+});
+menu.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    menu.classList.remove("open");
+  });
+});
+
+// 2) Price list filter: tab dabao, sirf us category ki items dikhao
+const tabs = document.querySelectorAll(".tab");
+const items = document.querySelectorAll(".item");
+
+tabs.forEach(function (tab) {
+  tab.addEventListener("click", function () {
+    tabs.forEach(function (t) { t.classList.remove("active"); });
+    tab.classList.add("active");
+
+    const filter = tab.dataset.filter;
+    items.forEach(function (item) {
+      if (filter === "all" || item.dataset.cat === filter) {
+        item.classList.remove("hide");
+      } else {
+        item.classList.add("hide");
+      }
+    });
+  });
+});
+
+// 3) Booking form validation
+const form = document.getElementById("booking-form");
+const msg = document.getElementById("msg");
+
+// Purani date select na ho sake
+document.getElementById("date").min = new Date().toISOString().split("T")[0];
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // page reload na ho
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const service = document.getElementById("service").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+
+  msg.className = "msg";
+
+  if (name.length < 3) {
+    msg.textContent = "Please enter your full name.";
+    msg.classList.add("error");
+    return;
+  }
+  if (phone.replace(/\D/g, "").length < 10) {
+    msg.textContent = "Please enter a valid phone number.";
+    msg.classList.add("error");
+    return;
+  }
+  if (!service || !date || !time) {
+    msg.textContent = "Please choose a service, date and time.";
+    msg.classList.add("error");
+    return;
+  }
+
+  msg.textContent = "Thanks, " + name + "! We will confirm your " + service + " on " + date + ".";
+  msg.classList.add("ok");
+  form.reset();
+});
+
+// 4) Footer mein current year
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

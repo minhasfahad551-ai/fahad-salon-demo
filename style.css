@@ -1,0 +1,134 @@
+/* ============ 1. COLOURS & BASICS (yahan se colours change karein) ============ */
+:root{
+  --slate:#1C2630;
+  --slate-soft:#2A3846;
+  --brass:#C08A3E;
+  --brass-light:#D9A75C;
+  --oxblood:#8C2433;
+  --navy:#1F4E8C;
+  --paper:#EEF0F2;
+  --ink:#18202A;
+  --muted:#5d6975;
+  --line:#d5dae0;
+  --radius:6px;
+  --head:"Barlow Condensed", Impact, sans-serif;
+  --body:"Barlow", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,92%);margin-inline:auto}
+.container.narrow{width:min(780px,92%)}
+section{padding:90px 0}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.05}
+h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:50ch;margin-bottom:38px}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+
+/* Buttons */
+.btn{display:inline-block;padding:14px 30px;border-radius:var(--radius);font-family:var(--head);font-weight:700;font-size:1.15rem;letter-spacing:.04em;border:2px solid transparent;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.small{padding:8px 20px;font-size:1.05rem}
+.btn.full{width:100%}
+.btn-brass{background:var(--brass);color:var(--slate)}
+.btn-brass:hover{background:var(--brass-light)}
+.btn-line{border-color:#cfd6de;color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.08)}
+
+/* ============ 2. NAVBAR ============ */
+header{position:sticky;top:0;z-index:50;background:var(--slate);border-bottom:3px solid var(--brass)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--head);font-size:2rem;font-weight:700;color:#fff;letter-spacing:.12em}
+.logo span{color:var(--brass)}
+.menu{display:flex;gap:30px;list-style:none;align-items:center}
+.menu a{color:#d6dde5;font-weight:500;transition:color .2s}
+.menu a:hover{color:var(--brass-light)}
+.menu a.btn{color:var(--slate)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.9rem;cursor:pointer}
+
+/* ============ 3. HERO ============ */
+.hero{background:var(--slate);color:#fff;padding:90px 0 100px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(3.2rem,9vw,6.4rem);text-transform:uppercase;margin-bottom:24px}
+.hero p{color:#c3cdd8;max-width:46ch;margin-bottom:34px;font-size:1.1rem}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:42px;margin-top:52px;color:#aab6c3;font-size:.95rem}
+.hero-stats strong{display:block;font-family:var(--head);font-size:2.4rem;color:var(--brass);line-height:1}
+
+/* Barber pole (CSS se) */
+.pole-wrap{display:flex;flex-direction:column;align-items:center}
+.pole-cap{width:120px;height:26px;border-radius:14px 14px 4px 4px;background:linear-gradient(90deg,#8a6128,var(--brass-light),#8a6128)}
+.pole-cap.bottom{border-radius:4px 4px 14px 14px}
+.pole{
+  width:88px;height:340px;border-inline:4px solid #e9edf1;
+  background:repeating-linear-gradient(-45deg,
+    #f4f6f8 0 22px, var(--oxblood) 22px 44px, #f4f6f8 44px 66px, var(--navy) 66px 88px);
+  background-size:124px 124px;
+  animation:spin 3s linear infinite;
+  box-shadow:inset 14px 0 18px rgba(255,255,255,.25),inset -14px 0 18px rgba(0,0,0,.3)}
+@keyframes spin{to{background-position:0 124px}}
+
+/* ============ 4. PRICE LIST ============ */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.tab{padding:9px 22px;border-radius:var(--radius);border:2px solid var(--line);background:#fff;cursor:pointer;font-family:var(--head);font-size:1.15rem;font-weight:600;color:var(--ink);transition:.2s}
+.tab:hover{border-color:var(--slate)}
+.tab.active{background:var(--slate);color:#fff;border-color:var(--slate)}
+.menu-list{list-style:none;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:8px 28px}
+.item{display:flex;align-items:flex-end;gap:12px;padding:20px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item h3{font-size:1.7rem}
+.item p{color:var(--muted);font-size:.95rem}
+.dots{flex:1;border-bottom:2px dotted #b9c1ca;margin-bottom:8px;min-width:30px}
+.price{font-family:var(--head);font-size:2rem;font-weight:700;color:var(--oxblood);line-height:1}
+.item.hide{display:none}
+
+/* ============ 5. TEAM ============ */
+.dark{background:var(--slate);color:#fff}
+.dark .lead{color:#c3cdd8}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.barber{background:var(--slate-soft);border-radius:var(--radius);padding:30px;border-top:4px solid var(--brass)}
+.avatar{width:72px;height:72px;border-radius:50%;background:var(--brass);color:var(--slate);display:grid;place-items:center;font-family:var(--head);font-size:1.9rem;font-weight:700;margin-bottom:16px}
+.barber h3{font-size:1.8rem;margin-bottom:6px}
+.barber p{color:#c3cdd8;font-size:.95rem}
+
+/* ============ 6. REVIEWS ============ */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.review{background:#fff;border:1px solid var(--line);border-left:5px solid var(--brass);border-radius:var(--radius);padding:28px}
+.stars{color:var(--brass);letter-spacing:3px;margin-bottom:10px}
+.review p{font-size:1.15rem;font-weight:500;margin-bottom:14px}
+.review small{color:var(--muted)}
+
+/* ============ 7. BOOKING FORM ============ */
+.book{background:#e1e6eb}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.info{list-style:none}
+.info li{margin-bottom:12px;color:var(--muted)}
+.info b{color:var(--ink)}
+form{background:#fff;padding:32px;border-radius:var(--radius);border:1px solid var(--line);box-shadow:0 18px 36px rgba(28,38,48,.1)}
+label{display:block;font-weight:600;margin-bottom:6px;font-size:.95rem}
+input,select{width:100%;padding:12px 14px;border:2px solid var(--line);border-radius:var(--radius);font-family:inherit;font-size:1rem;margin-bottom:18px;background:#fff}
+input:focus,select:focus{border-color:var(--slate);outline:none}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.msg{margin-top:14px;font-weight:600;min-height:24px}
+.msg.error{color:#b3261e}
+.msg.ok{color:#1f7a45}
+
+/* ============ 8. FOOTER ============ */
+footer{background:var(--slate);color:#aab6c3;padding:40px 0;text-align:center;font-size:.95rem;border-top:3px solid var(--brass)}
+footer .logo{display:block;margin-bottom:6px}
+
+/* ============ 9. MOBILE (responsive) ============ */
+@media (max-width:860px){
+  .hero-grid,.book-grid{grid-template-columns:1fr}
+  .pole-wrap{display:none}
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:75px;left:0;right:0;background:var(--slate);flex-direction:column;padding:24px 0;gap:20px}
+  .menu.open{display:flex}
+  section{padding:64px 0}
+  .menu-list{padding:4px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+  .pole{animation:none}
+}
